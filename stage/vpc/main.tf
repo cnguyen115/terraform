@@ -14,5 +14,9 @@ module "vpc" {
   public_subnets  = "${var.public_subnets}"
 
   enable_nat_gateway = true
-  enable_vpn_gateway = true
+
+  tags = {
+    Terraform = "true"
+    Environment = "stage"
+  }
 }
